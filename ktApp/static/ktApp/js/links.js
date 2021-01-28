@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
             }
             else if (a.dataset.activity==='home'){
                 content.innerHTML = '';
-                carousel.style.animationPlayState = 'paused';
                 carousel.style.display = 'block';
             }
             else if (a.dataset.activity === 'ski-instructor'){
