@@ -14,6 +14,18 @@ class Hut(models.Model):
 
     def __str__(self):
         return self.name + ' near ' + self.landmark
+
+    def serialize(self):
+        return {
+            'id' : self.id,
+            'name' : self.name,
+            'landmark': self.landmark,
+            'available' : self.available,
+            'rating' : self.rating
+        }
+
+
+
 class Hotel(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=40)
@@ -23,6 +35,15 @@ class Hotel(models.Model):
 
     def __str__(self):
         return self.name+' near '+self.landmark
+    
+    def serialize(self):
+        return {
+            'id' : self.id,
+            'name' : self.name,
+            'landmark': self.landmark,
+            'available' : self.available,
+            'rating' : self.rating
+        }
 
 class SkiShop(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -31,6 +52,13 @@ class SkiShop(models.Model):
 
     def __str__(self):
         return self.name+' near '+self.landmark
+    
+    def serialize(self):
+        return {
+            'id' : self.id,
+            'name' : self.name,
+            'landmark': self.landmark,
+        }
 
 class SkiLender(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -38,18 +66,36 @@ class SkiLender(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def serialize(self):
+        return {
+            'id' : self.id,
+            'name' : self.name,
+        }
 class Instructor(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=40)
 
     def __str__(self):
         return self.name
+
+    def serialize(self):
+        return {
+            'id' : self.id,
+            'name' : self.name,
+        }
 class PonyWalla(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=40)
 
     def __str__(self):
         return self.name
+
+    def serialize(self):
+        return {
+            'id' : self.id,
+            'name' : self.name,
+        }
 
 #Phone Numbers
 

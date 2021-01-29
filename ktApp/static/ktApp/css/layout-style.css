@@ -1,7 +1,7 @@
 body{
-    background-color: rgb(253, 253, 253);
+    background-color: rgb(39, 46, 49);
 }
-#mast-head{
+#home-link{
     font-size: 50px;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,6 +17,25 @@ body{
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+}
+#content{
+    margin-top: 10px;
+}
+#dabba{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    margin: 10px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+}
+#dabba:hover{
+    background-color: rgb(1, 0, 22);
+    outline-color: black;
+    outline-width: 4px;
+    color: lavender;
 }
 
 

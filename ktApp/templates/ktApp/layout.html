@@ -7,20 +7,18 @@
         <link rel="stylesheet" href = "{% static 'ktApp/css/layout-style.css' %}">
         <script type="text/javascript" src="{% static 'ktApp/js/links.js' %}"></script>
     </head>
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
     <body>
         <nav class="navbar navbar-static-top navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" id="mast-head" href="{% url 'ktApp:home' %}" data-activity="home">KashTag</a>
+              <a id="home-link" class="navbar-brand" href="{% url 'ktApp:home' %}" data-activity="home">KashTag</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'ktApp:home' %}" data-activity="home">Home</a>
+                    <a id="home-link1" class="nav-link active" aria-current="page" href="{% url 'ktApp:home' %}" data-activity="home">Home</a>
                   </li>
                   <!-- <li class="nav-item">
                     <a class="nav-link" href="#"></a>
@@ -30,8 +28,8 @@
                       Where Do You Wanna Stay?
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="{% url 'ktApp:display-hotels' %}" data-activity="hotel">Hotel</a></li>
-                      <li><a class="dropdown-item"  href="{% url 'ktApp:display-huts' %}" data-activity="hut">Hut</a></li>
+                      <li><a id="links" class="dropdown-item" href="#" data-activity="hotel">Hotel</a></li>
+                      <li><a id="links" class="dropdown-item"  href="#" data-activity="hut">Hut</a></li>
                       <li><hr class="dropdown-divider"></li>
                     </ul>
                     
@@ -42,11 +40,11 @@
                       Other Services
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#" data-activity="ski">Skiing/Snowboarding</a></li>
-                      <li><a class="dropdown-item" href="#" data-activity="sledge">Sledge/Horseriding</a></li>
-                      <li><a class="dropdown-item" href="#" data-activity="instructor">Call a Ski Instructor</a></li>
-                      <li><a class="dropdown-item" href="#" data-activity="ski-shop">Call a Ski Shop</a></li>
-                      <li><a class="dropdown-item" href="#" data-activity="ski-lender">Call a Ski Lender</a></li>
+                      <li><a id="links" class="dropdown-item" href="#" data-activity="ski">Skiing/Snowboarding</a></li>
+                      <li><a id="links" class="dropdown-item" href="#" data-activity="sledge">Sledge/Horseriding</a></li>
+                      <li><a id="links" class="dropdown-item" href="#" data-activity="instructor">Call a Ski Instructor</a></li>
+                      <li><a id="links" class="dropdown-item" href="#" data-activity="ski-shop">Call a Ski Shop</a></li>
+                      <li><a id="links" class="dropdown-item" href="#" data-activity="ski-lender">Call a Ski Lender</a></li>
                     </ul>
                     
                     
