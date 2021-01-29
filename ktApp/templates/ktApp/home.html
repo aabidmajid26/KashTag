@@ -31,7 +31,23 @@
       </div>
     </div>
     <div id="content">
-
     </div>
+    <div id="react"></div>
+
+
+    <script type="text/babel">
+      class Hello extends React.Component {
+        render() {
+          return ( 
+                <div>
+              <h1>Hello Kworld</h1>
+              <button>Scream HeyK!</button>
+            </div>
+              );
+        }
+      }
+
+      ReactDOM.render(<Hello />, document.getElementById('react'))
+    </script>
      
 {% endblock %}

@@ -66,10 +66,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     carousel.style.display = 'none';
                     carousel.style.animationPlayState = 'paused';
                 });
-                
             }
-
-            
         }
     })
 });

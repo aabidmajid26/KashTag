@@ -7,6 +7,9 @@
         <link rel="stylesheet" href = "{% static 'ktApp/css/layout-style.css' %}">
         <script type="text/javascript" src="{% static 'ktApp/js/links.js' %}"></script>
     </head>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <body>
         <nav class="navbar navbar-static-top navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -57,6 +60,7 @@
               </div>
             </div>
           </nav>
+          
 
          {% block content %}
          {% endblock %}
@@ -64,5 +68,5 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    </body>
+        </body>
 </html>
