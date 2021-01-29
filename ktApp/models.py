@@ -2,10 +2,14 @@ from django.db import models
 
 # Create your models here.
 
+#Services
+
 class Hut(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=40)
     landmark = models.CharField(max_length=40)
+    available = models.BooleanField(default=True)
+    rating = models.CharField(max_length=1, null=True)
 
 
     def __str__(self):
@@ -14,6 +18,8 @@ class Hotel(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=40)
     landmark = models.CharField(max_length=40)
+    available = models.BooleanField(default=True)
+    rating = models.CharField(max_length=1, null=True)
 
     def __str__(self):
         return self.name+' near '+self.landmark
@@ -45,10 +51,11 @@ class PonyWalla(models.Model):
     def __str__(self):
         return self.name
 
+#Phone Numbers
+
 class PhonePonyWalla(models.Model):
     fid = models.ForeignKey(PonyWalla,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
-
 class PhoneHut(models.Model):
     fid = models.ForeignKey(Hut,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
@@ -64,3 +71,13 @@ class PhoneSkiLender(models.Model):
 class PhoneInstructor(models.Model):
     fid = models.ForeignKey(Instructor,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
+
+class AccomodationHut(models.Model):
+    fid = models.ForeignKey(Hut, on_delete=models.PROTECT)
+    c_rooms = models.IntegerField()
+    c_occupied = models.IntegerField()
+
+class AccomodationHotel(models.Model):
+    fid = models.ForeignKey(Hotel, on_delete=models.PROTECT)
+    c_rooms = models.IntegerField()
+    c_occupied = models.IntegerField()

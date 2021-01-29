@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import Hut, Hotel, PonyWalla, Instructor, SkiLender,SkiShop, PhoneHotel, PhoneHut, PhoneInstructor, PhonePonyWalla, PhoneSkiLender, PhoneSkiShop
-
+from .models import AccomodationHotel, AccomodationHut
 admin.site.register(Hut)
 admin.site.register(Hotel)
 admin.site.register(PonyWalla)
@@ -15,3 +15,5 @@ admin.site.register(PhoneInstructor)
 admin.site.register(PhonePonyWalla)
 admin.site.register(PhoneSkiLender)
 admin.site.register(PhoneSkiShop)
+admin.site.register(AccomodationHut)
+admin.site.register(AccomodationHotel)
