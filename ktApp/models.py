@@ -111,18 +111,53 @@ class PhonePonyWalla(models.Model):
 class PhoneHut(models.Model):
     fid = models.ForeignKey(Hut,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
+
+    def serialize(self):
+        return {
+            'fid' : self.fid,
+            'phoneNumber' : self.phone_number
+        }
+
+
 class PhoneHotel(models.Model):
     fid = models.ForeignKey(Hotel,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
+    def serialize(self):
+        return {
+            'fid' : self.fid,
+            'phoneNumber' : self.phone_number
+        }
+
 class PhoneSkiShop(models.Model):
     fid = models.ForeignKey(SkiShop,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
+
+    def serialize(self):
+        return {
+            'fid' : self.fid,
+            'phoneNumber' : self.phone_number
+        }
+
 class PhoneSkiLender(models.Model):
     fid = models.ForeignKey(SkiLender,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
+
+    def serialize(self):
+        return {
+            'fid' : self.fid,
+            'phoneNumber' : self.phone_number
+        }
+        
 class PhoneInstructor(models.Model):
     fid = models.ForeignKey(Instructor,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
+
+    def serialize(self):
+        return {
+            'fid' : self.fid,
+            'phoneNumber' : self.phone_number
+        }
+        
 
 class AccomodationHut(models.Model):
     fid = models.ForeignKey(Hut, on_delete=models.PROTECT)

@@ -81,3 +81,9 @@ thead{
 td{
     color: black;
 }
+td:hover{
+    background-color: cornflowerblue;
+    color: white;
+    height: 50px;
+    font-size: 40px;
+}
