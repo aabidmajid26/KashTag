@@ -23,8 +23,11 @@ def display(request, activity):
     objs = objs[:l]
     return JsonResponse(objs, safe=False)
 def displayIndividual(request, activity, fid):
-    return JsonResponse({
-        "phoneNumber" : '9797814442'
-    }, safe=False)
+    
+    allObjects = model['activity'].objects.filter(id=fid)
+    if activity == 'ski' or 'ski-shop' or 'hut' or 'hotel':
+        return JsonResponse([obj.serialize() for obj in allObjects], safe = False)
+    else:
+        return JsonResponse({'Id': 'Jello Jorld'}, safe=False)
     
 

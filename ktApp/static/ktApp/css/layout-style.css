@@ -1,18 +1,18 @@
 body{
-    background-color: rgb(39, 46, 49);
+    background-color:rgb(255, 248, 248);
     height: 100%;
     width: 100%;
 }
 nav{
-    background-color: rgba(143, 72, 47, 0.678);
+    background-color: rgb(34, 33, 33);
     position: absolute;
     top: 0px;
+    color: tomato;
 }
 #home-link{
     font-size: 50px;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 .carouselControl{
     height: 100%;
@@ -65,11 +65,19 @@ nav{
     }
 }
 #footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    background-color: orangered;
+    height: 200px;
+    background-color: rgb(34, 33, 33);
     color: white;
     text-align: center;
+    margin-top: 40px;
   }
+#people_info{
+    display: none;
+}
+thead{
+    color: tomato;
+}
+td{
+    color: black;
+}

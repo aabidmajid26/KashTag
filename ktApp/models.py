@@ -17,7 +17,7 @@ class Hut(models.Model):
 
     def serialize(self):
         return {
-            'id' : self.id,
+            'Id' : self.id,
             'name' : self.name,
             'landmark': self.landmark,
             'available' : self.available,
@@ -38,7 +38,7 @@ class Hotel(models.Model):
     
     def serialize(self):
         return {
-            'id' : self.id,
+            'Id' : self.id,
             'name' : self.name,
             'landmark': self.landmark,
             'available' : self.available,
@@ -55,7 +55,7 @@ class SkiShop(models.Model):
     
     def serialize(self):
         return {
-            'id' : self.id,
+            'Id' : self.id,
             'name' : self.name,
             'landmark': self.landmark,
         }
@@ -69,7 +69,7 @@ class SkiLender(models.Model):
     
     def serialize(self):
         return {
-            'id' : self.id,
+            'Id' : self.id,
             'name' : self.name,
         }
 class Instructor(models.Model):
@@ -81,7 +81,7 @@ class Instructor(models.Model):
 
     def serialize(self):
         return {
-            'id' : self.id,
+            'Id' : self.id,
             'name' : self.name,
         }
 class PonyWalla(models.Model):
@@ -93,7 +93,7 @@ class PonyWalla(models.Model):
 
     def serialize(self):
         return {
-            'id' : self.id,
+            'Id' : self.id,
             'name' : self.name,
         }
 
