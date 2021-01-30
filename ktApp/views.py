@@ -3,6 +3,7 @@ from django.http import JsonResponse
 
 # Create your views here.
 from .models import Hut, Hotel, SkiLender, SkiShop, PonyWalla, Instructor
+from .models import PhoneHotel, PhoneHut, PhoneInstructor, PhonePonyWalla, PhoneSkiLender, PhoneSkiShop
 model = {
     'hut' : Hut,
     'hotel' : Hotel,
@@ -12,7 +13,15 @@ model = {
     'instructor' : Instructor,
     'ski' : SkiShop
 }
-
+modelPhone = {
+    'hut' : PhoneHut,
+    'hotel' : PhoneHotel,
+    'ski-shop': PhoneSkiShop,
+    'sledge' : PhonePonyWalla,
+    'ski-lender' : PhoneSkiLender,
+    'instructor' : PhoneInstructor,
+    'ski' : PhoneSkiShop
+}
 def home(request):
     return render(request, "ktApp/home.html")
 
@@ -23,8 +32,16 @@ def display(request, activity):
     objs = objs[:l]
     return JsonResponse(objs, safe=False)
 def displayIndividual(request, activity, fid):
-    return JsonResponse({
-        "phoneNumber" : '9797814442'
-    }, safe=False)
     
+    allObjects = model['activity'].objects.filter(id=fid)
+    if activity == 'ski' or 'ski-shop' or 'hut' or 'hotel':
+        return JsonResponse([obj.serialize() for obj in allObjects], safe = False)
+    else:
+        pass
+
+def getPhone(request, activity, fid1):
+    obj = modelPhone[activity].objects.get(fid=fid1)
+    x = obj.serialize()
+    phoneNumber = x['phoneNumber']
+    return HttpResponse(phoneNumber)
 
