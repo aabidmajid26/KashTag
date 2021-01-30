@@ -22,5 +22,9 @@ def display(request, activity):
     l = len(objs)-(len(objs)%3)
     objs = objs[:l]
     return JsonResponse(objs, safe=False)
+def displayIndividual(request, activity, fid):
+    return JsonResponse({
+        "phoneNumber" : '9797814442'
+    }, safe=False)
     
 

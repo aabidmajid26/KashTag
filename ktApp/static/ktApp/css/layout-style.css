@@ -1,5 +1,12 @@
 body{
     background-color: rgb(39, 46, 49);
+    height: 100%;
+    width: 100%;
+}
+nav{
+    background-color: rgba(143, 72, 47, 0.678);
+    position: absolute;
+    top: 0px;
 }
 #home-link{
     font-size: 50px;
@@ -9,6 +16,8 @@ body{
 }
 .carouselControl{
     height: 100%;
+    margin-bottom: 1px;
+    height: max-content;
 }
 
 #carousel{
@@ -20,6 +29,7 @@ body{
 }
 #content{
     margin-top: 10px;
+    margin-bottom: 100px;
 }
 #dabba{
     background-color: rgb(255, 255, 255);
@@ -54,3 +64,12 @@ body{
         opacity: 0;
     }
 }
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: orangered;
+    color: white;
+    text-align: center;
+  }

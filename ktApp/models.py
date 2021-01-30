@@ -102,6 +102,12 @@ class PonyWalla(models.Model):
 class PhonePonyWalla(models.Model):
     fid = models.ForeignKey(PonyWalla,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)
+    def serialize(self):
+        return {
+            'fid' : self.fid,
+            'phoneNumber' : self.phone_number
+        }
+
 class PhoneHut(models.Model):
     fid = models.ForeignKey(Hut,on_delete=models.PROTECT)
     phone_number = models.CharField(max_length=10, unique=True)

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             
 
             if (Id === 'home-link' || Id=== 'home-link1'){
+                carousel.style.animationPlayState = 'paused';
                 carousel.style.display = 'block'
                 content.style.display = 'none'
             }
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
                     }
                     carousel.style.animationPlayState = 'running';
-                document.addEventListener("animationend",()=>{
+                    document.addEventListener("animationend",()=>{
                     carousel.style.display = 'none';
                     carousel.style.animationPlayState = 'paused';
                 });
@@ -50,37 +51,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
                 });
             }
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-            // if (a.dataset.activity === 'ski'){
-                // carousel.style.animationPlayState = 'running';
-                // document.addEventListener("animationend",()=>{
-                //     carousel.style.display = 'none';
-                //     carousel.style.animationPlayState = 'paused';
-                // });
-            //     content.innerHTML = '<h1>Hello Skier</h1>';
-            // }
-            // else if (a.dataset.activity === 'sledge'){
-            //     content.innerHTML = '<h1>Hello Sledger</h1>';
-            //     carousel.style.animationPlayState = 'running';
-            //     document.addEventListener("animationend",()=>{
-            //         carousel.style.display = 'none';
-            //         carousel.style.animationPlayState = 'paused';
-            //     });
-            // }
             
         }
     });
