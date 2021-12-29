@@ -1,1 +1,1 @@
-web: gunicorn kashtag.wsgi --log-file -
+web: gunicorn KashTag.wsgi --log-file -
