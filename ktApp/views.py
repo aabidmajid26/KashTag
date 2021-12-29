@@ -28,8 +28,10 @@ def home(request):
 def display(request, activity):
     allObjects = model[activity].objects.all()
     objs = [obj.serialize() for obj in allObjects]
-    l = len(objs)-(len(objs)%3)
-    objs = objs[:l]
+    L = len(objs)
+    if L>3:
+        L = L-(L%3)
+    objs = objs[:L]
     return JsonResponse(objs, safe=False)
 def displayIndividual(request, activity, fid):
     
@@ -37,7 +39,7 @@ def displayIndividual(request, activity, fid):
     if activity == 'ski' or 'ski-shop' or 'hut' or 'hotel':
         return JsonResponse([obj.serialize() for obj in allObjects], safe = False)
     else:
-        pass
+        return HttpResponse("nothing here.")
 
 def getPhone(request, activity, fid1):
     obj = modelPhone[activity].objects.get(fid=fid1)
