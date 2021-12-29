@@ -1,0 +1,90 @@
+body{
+    background-color:rgb(255, 248, 248);
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    background-color: rgb(34, 33, 33);
+    position: absolute;
+    top: 0px;
+    color: tomato;
+}
+#home-link{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.carouselControl{
+    height: 100%;
+    margin-bottom: 1px;
+    height: max-content;
+}
+
+#carousel{
+    animation-play-state: paused;
+    animation-name: hide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+#content{
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+#dabba{
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    margin: 10px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+}
+#dabba:hover{
+    background-color: rgb(1, 0, 22);
+    outline-color: black;
+    outline-width: 4px;
+    color: lavender;
+}
+
+
+@keyframes hide{
+    0%{
+        opacity: 1;
+    }
+    40%{
+        opacity:0;
+        width: 100%;
+        height: 100%;
+    }
+    100%{
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+    }
+}
+#footer {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(34, 33, 33);
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+  }
+#people_info{
+    display: none;
+}
+thead{
+    color: tomato;
+}
+td{
+    color: black;
+}
+td:hover{
+    background-color: cornflowerblue;
+    color: white;
+    height: 50px;
+    font-size: 40px;
+}
